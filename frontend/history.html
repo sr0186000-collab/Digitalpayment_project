@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History - SecurePay</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div id="sidebar" class="sidebar">
+        <span onclick="goTo('dashboard.html')">Dashboard</span>
+        <span onclick="goTo('send.html')">Send / Add</span>
+        <span onclick="goTo('history.html')">History</span>
+    </div>
+    
+    <div class="dev">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="logo">🔷 SecurePay</div>
+
+        <nav class="nav-links">
+            <span onclick="goTo('dashboard.html')">Dashboard</span>
+            <span onclick="goTo('send.html')">Send / Add</span>
+            <span class="active">History</span>
+        </nav>
+
+    </div>
+
+    <div class="user">
+        <div class="icon">
+            <div class="avatar" id="avatar"></div>
+            <span id="username"></span>
+        </div>
+        <div class="line"></div>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+</header>
+
+<main class="container">
+
+    <div class="page-header">
+        <h1>Transaction History</h1>
+        <p id="txCountText">0 transactions</p>
+    </div>
+
+    <div class="info-card">
+        <h3>🔒 RSA-2048 Encrypted Records</h3>
+        <p>All transactions are encrypted and stored securely.</p>
+    </div>
+
+    <div id="historyList" class="history-list">
+
+        <div id="emptyState" class="empty">
+            <div class="empty-icon">📋</div>
+            <p>No transactions yet</p>
+        </div>
+
+    </div>
+
+    <button class="send-btn" onclick="goTo('send.html')">
+        Send Money
+    </button>
+
+</main>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - SecurePay</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+
+
+<body>
+
+<header class="navbar">
+    <div id="sidebar" class="sidebar">
+        <span onclick="goTo('dashboard.html')">Dashboard</span>
+        <span onclick="goTo('send.html')">Send / Add</span>
+        <span onclick="goTo('history.html')">History</span>
+    </div>
+
+    <div class="dev">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <div class="logo">
+            <span>🔷</span>
+            <span>SecurePay</span>
+        </div>
+
+        <nav class="nav-links">
+            <span class="active">Dashboard</span>
+            <span onclick="goTo('send.html')">Send / Add</span>
+            <span onclick="goTo('history.html')">History</span>
+        </nav>
+
+    </div>
+
+    <div class="user">
+        <div class="icon">
+            <div class="avatar" id="avatar"></div>
+            <span id="username"></span>
+        </div>
+        <div class="line"></div>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+</header>
+
+<main class="container">
+
+    <div class="page-header">
+        <h1>Dashboard</h1>
+        <p id="welcome">Welcome back</p>
+    </div>
+
+    <div class="balance-card">
+
+        <div class="balance-top">
+            <span>💳 Wallet Balance</span>
+            <span class="badge">🔒 RSA Protected</span>
+        </div>
+
+        <h1 id="balance">₹0.00</h1>
+
+        <div class="actions">
+            <button class="primary" onclick="goTo('send.html')">Send Money</button>
+        </div>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="card small">
+            <p>Total Sent</p>
+            <h2 id="sent">₹0</h2>
+        </div>
+
+        <div class="card small">
+            <p>Total Received</p>
+            <h2 id="received">₹0</h2>
+        </div>
+
+        <div class="card small">
+            <p>Transactions</p>
+            <h2 id="txCount">0</h2>
+        </div>
+
+    </div>
+
+    <div class="recent">
+
+        <div class="recent-head">
+            <h2>Recent Activity</h2>
+            <span onclick="goTo('history.html')">View all</span>
+        </div>
+
+        <div id="recentList"></div>
+
+        <div id="recentEmpty" class="empty">
+            <div class="empty-icon">📋</div>
+            <p>No transactions yet. Send money to get started.</p>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
