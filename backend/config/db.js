@@ -1,12 +1,3 @@
-db.getConnection()
-  .then(conn => {
-    console.log("✅ DB Connected Successfully");
-    conn.release();
-  })
-  .catch(err => {
-    console.error("❌ DB Connection Failed:", err);
-  });
-
 const mysql = require("mysql2");
 
 const db = mysql.createPool({
@@ -23,4 +14,13 @@ const db = mysql.createPool({
     queueLimit: 0
 });
 
+db.getConnection()
+  .then(conn => {
+    console.log("✅ DB Connected Successfully");
+    conn.release();
+  })
+  .catch(err => {
+    console.error("❌ DB Connection Failed:", err);
+  });
+  
 module.exports = db.promise();
