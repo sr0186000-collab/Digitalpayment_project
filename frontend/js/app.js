@@ -1,4 +1,4 @@
-const API = "http://localhost:5000";
+const API = "https://digitalpayment-project.onrender.com";
 
 function signup() {
 
