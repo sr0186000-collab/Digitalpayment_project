@@ -7,6 +7,8 @@ const authMiddleware = require("../middleware/auth");
 
 // REGISTER
 router.post("/register", async (req, res) => {
+    console.log("REGISTER HIT");
+    console.log(req.body);
     const { name, password, phone } = req.body;
     const email = req.body.email.toLowerCase();
 
