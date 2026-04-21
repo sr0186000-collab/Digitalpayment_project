@@ -442,6 +442,10 @@ button {
     .recent {
         display: none;
     }
+
+    .username {
+        display: none;
+    }
 }
 
 
