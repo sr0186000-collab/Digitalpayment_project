@@ -271,7 +271,7 @@ if (window.location.pathname.includes("history.html")) {
     const empty = document.getElementById("emptyState");
     const countText = document.getElementById("txCountText");
 
-    fetch("http://localhost:5000/transactions", {
+    fetch("https://digitalpayment-project.onrender.com/transactions", {
         headers: {
             "authorization": token
         }
